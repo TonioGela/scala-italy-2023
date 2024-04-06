@@ -1,0 +1,78 @@
+/*!
+ * @theme toniogela
+ * @author toniogela
+ *
+ * @auto-scaling fittingHeader,math
+ * @size 16:9 1920px 1080px
+ */
+
+/*
+  If you want you can use 1280px 720px as size for more compact slides
+  If you add ",code" to autoscaling code will scale too, but results
+  mayb be strange so use it with care
+*/
+
+@use "code-highlight";
+@import-theme 'uncover';
+
+:root {
+  /* Slide color */
+  --color-background: #1a2539 !important;
+  /* Code snippet background color */
+  --color-background-code: #2b303b !important;
+  --color-inlinecode: #a3be8c;
+  --color-background-paginate: transparent !important;
+  /* Text color */
+  --color-foreground: #e0e0e0 !important;
+  /* Color for links */
+  --color-highlight: #a53f2b !important;
+  --color-highlight-italic: #a3be8c !important;
+  --color-highlight-hover: #a53f2b !important;
+  /* Bold text color */
+  --color-highlight-heading: #a53f2b !important;
+  /* Header and footer */
+  --color-header: #e0e0e0 !important;
+  --color-header-shadow: transparent !important;
+}
+
+em {
+  font-style: normal !important;
+  color: var(--color-highlight-italic) !important;
+}
+
+section {
+  font-family: sans-serif;
+
+  strong {
+    color: var(--color-highlight-heading);
+    font-weight: strong;
+  }
+}
+
+pre {
+  overflow: hidden;
+  border-radius: .25em;
+  border: 2px solid #0e1013;
+  background: var(--color-background-code) !important;
+  padding: .4em .6em;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+
+  code {
+    height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+    border-radius: unset;
+    border: unset;
+    color: #c0c5ce !important;
+    padding: unset;
+  }
+}
+
+code {
+  border-radius: .25em;
+  border: 2px solid #0e1013;
+  color: var(--color-inlinecode) !important;
+  overflow-wrap: break-word;
+}
